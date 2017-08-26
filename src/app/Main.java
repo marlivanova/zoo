@@ -1,6 +1,8 @@
 package app;
 
+import com.zoo.animals.Animal;
 import com.zoo.animals.Tiger;
+import com.zoo.animals.rare.SiberianTiger;
 
 /**
  * Created by kisik on 26.08.2017.
@@ -11,10 +13,13 @@ public class Main {
         //Integer hungerLevel = myTiger.getHungerLevel();
         //System.out.println(hungerLevel);
 
-        Tiger myTiger = new Tiger("Bubu", 78);
-        System.out.println("name: " + myTiger.getName() + " hunger: " + myTiger.getHungerLevel());
+        Animal myTiger = new SiberianTiger("Bubu", 78);
+        //System.out.println("name: " + myTiger.getName() + " hunger: " + myTiger.getHungerLevel());
 
-
+        System.out.println(myTiger.toString());
+        myTiger.move();
+        myTiger.makeSound();
+        myTiger.feed();
 
     }
 }

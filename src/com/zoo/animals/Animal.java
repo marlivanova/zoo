@@ -13,7 +13,7 @@ public class Animal {
     public Animal() {
         hungerLevel = 50;
         name = " unnamed animal ";
-        System.out.println("hello from Animal constructor");
+        System.out.println("hello from Animal(hungerLevel) constructor");
     }
 
     public Animal(Integer hungerLevel) {
@@ -80,5 +80,11 @@ public class Animal {
         if (hungerLevel > 0)
             hungerLevel = hungerLevel - 1;
         else System.out.println("I don't need more food");
+    }
+
+    @Override
+    public String toString() {
+        //return super.toString();
+        return "I'm Animal and my name is: " + name;
     }
 }
